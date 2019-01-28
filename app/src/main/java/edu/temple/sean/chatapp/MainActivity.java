@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent mIntent = new Intent(this, KeyService.class);
+        bindService(mIntent, mConnection, BIND_AUTO_CREATE);
         mContext = this;
         setContentView(R.layout.activity_main);
 
